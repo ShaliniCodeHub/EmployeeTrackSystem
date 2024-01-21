@@ -2,7 +2,8 @@
 # Overview
 - Welcome to the Employee Tracking System, a simple Spring Boot application designed to manage employee and department information. This application provides a set of CRUD (Create, Read, Update, Delete) operations for both employees and departments, allowing efficient tracking and management of organizational data.
 # Features
--1.addEmployee
+# Employee Management
+**1.addEmployee**
 •	Endpoint: **POST** {Host}/api/employees/addEmployee
 •	Description: Add a new employee to the system.
 •	Request Body: 
