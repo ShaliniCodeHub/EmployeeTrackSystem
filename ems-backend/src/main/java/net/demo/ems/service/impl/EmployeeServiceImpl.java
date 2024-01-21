@@ -1,14 +1,14 @@
-package net.javaguides.ems.service.impl;
+package net.demo.ems.service.impl;
 
 import lombok.AllArgsConstructor;
-import net.javaguides.ems.dto.EmployeeDto;
-import net.javaguides.ems.entity.Department;
-import net.javaguides.ems.entity.Employee;
-import net.javaguides.ems.exception.ResourceNotFoundException;
-import net.javaguides.ems.mapper.EmployeeMapper;
-import net.javaguides.ems.repository.DepartmentRepository;
-import net.javaguides.ems.repository.EmployeeRepository;
-import net.javaguides.ems.service.EmployeeService;
+import net.demo.ems.dto.EmployeeDto;
+import net.demo.ems.entity.Department;
+import net.demo.ems.entity.Employee;
+import net.demo.ems.exception.ResourceNotFoundException;
+import net.demo.ems.mapper.EmployeeMapper;
+import net.demo.ems.repository.DepartmentRepository;
+import net.demo.ems.repository.EmployeeRepository;
+import net.demo.ems.service.EmployeeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,8 @@
-package net.javaguides.ems.controller;
+package net.demo.ems.controller;
 
 import lombok.AllArgsConstructor;
-import net.javaguides.ems.dto.EmployeeDto;
-import net.javaguides.ems.service.EmployeeService;
+import net.demo.ems.dto.EmployeeDto;
+import net.demo.ems.service.EmployeeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

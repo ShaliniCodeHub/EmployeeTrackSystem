@@ -1,4 +1,4 @@
-package net.javaguides.ems.dto;
+package net.demo.ems.dto;
 
 public class EmployeeDto {
     private int id;

@@ -1,6 +1,6 @@
-package net.javaguides.ems.service;
+package net.demo.ems.service;
 
-import net.javaguides.ems.dto.DepartmentDto;
+import net.demo.ems.dto.DepartmentDto;
 
 import java.util.List;
 

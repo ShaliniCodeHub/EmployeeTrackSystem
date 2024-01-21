@@ -1,7 +1,7 @@
-package net.javaguides.ems.mapper;
+package net.demo.ems.mapper;
 
-import net.javaguides.ems.dto.DepartmentDto;
-import net.javaguides.ems.entity.Department;
+import net.demo.ems.dto.DepartmentDto;
+import net.demo.ems.entity.Department;
 
 public class DepartmentMapper {
 

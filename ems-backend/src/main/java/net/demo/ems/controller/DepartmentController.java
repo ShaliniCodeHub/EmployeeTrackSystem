@@ -1,8 +1,8 @@
-package net.javaguides.ems.controller;
+package net.demo.ems.controller;
 
 import lombok.AllArgsConstructor;
-import net.javaguides.ems.dto.DepartmentDto;
-import net.javaguides.ems.service.DepartmentService;
+import net.demo.ems.dto.DepartmentDto;
+import net.demo.ems.service.DepartmentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

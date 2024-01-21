@@ -1,4 +1,4 @@
-package net.javaguides.ems.entity;
+package net.demo.ems.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
