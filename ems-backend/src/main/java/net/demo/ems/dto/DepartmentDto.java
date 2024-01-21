@@ -33,5 +33,8 @@ public class DepartmentDto {
 		return "DepartmentDto [id=" + id + ", departmentName=" + departmentName + ", departmentDescription="
 				+ departmentDescription + "]";
 	}
+	public DepartmentDto() {
+		super();
+	}
     
 }

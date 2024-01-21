@@ -8,6 +8,9 @@ class EmsBackendApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// This test ensures that the application context loads successfully.
+        // If this test passes, it indicates that the Spring application context is initialized correctly.
+		
 	}
 
 }
