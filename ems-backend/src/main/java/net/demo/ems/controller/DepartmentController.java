@@ -23,11 +23,7 @@ public class DepartmentController {
 	
 	
 
-	public DepartmentController(DepartmentService departmentService) {
-		super();
-		this.departmentService = departmentService;
-	}
-
+	
 	// Build Create or Add Department REST API
 	@PostMapping("/addDepartment")
 	public ResponseEntity<DepartmentDto> createDepartment(
