@@ -52,13 +52,19 @@ public class EmployeeController {
 	// Build Get All Employees REST API
 	@GetMapping
 	public ResponseEntity<List<EmployeeDto>> getAllEmployees(
-			@RequestHeader(name = "transactionId", required = true) String transactionId) {
-		LOGGER.info("GET | @Controller - START - getAllEmployees ...| transactionId: {}",
-				transactionId);
-				List<EmployeeDto> employees = employeeService.getAllEmployees();
-				LOGGER.info("GET | @Controller - END - getAllEmployees ...| transactionId: {}",
-						transactionId);
-		return ResponseEntity.ok(employees);
+	        @RequestHeader(name = "transactionId", required = true) String transactionId) {
+	    LOGGER.info("GET | @Controller - START - getAllEmployees ...| transactionId: {}",
+	            transactionId);
+	    try {
+	        List<EmployeeDto> employees = employeeService.getAllEmployees();
+	        LOGGER.info("GET | @Controller - END - getAllEmployees ...| transactionId: {} | Number of employees: {}",
+	                transactionId, employees.size());
+	        return ResponseEntity.ok(employees);
+	    } catch (Exception e) {
+	        LOGGER.error("GET | @Controller - ERROR - getAllEmployees ...| transactionId: {}", transactionId, e);
+	        // Return an appropriate ResponseEntity for the error scenario
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+	    }
 	}
 
 	// Build Update Employee REST API

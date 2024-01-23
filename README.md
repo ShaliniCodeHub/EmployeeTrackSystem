@@ -1,40 +1,64 @@
 # Employee Tracking System
 
 ## Overview
-- Welcome to the Employee Tracking System, a simple Spring Boot application designed to manage employee and department information. This application provides a set of CRUD (Create, Read, Update, Delete) operations for both employees and departments, allowing efficient tracking and management of organizational data.
+Welcome to the Employee Tracking System, a Spring Boot application designed to manage employee and department information. This application provides CRUD (Create, Read, Update, Delete) operations for both employees and departments, along with integration with an additional module, the Employee-Analytic Service, to fetch performance-related details.
 
 ## Features
 
 ### Employee Management
-1. **Add Employee**
-    - Endpoint: **POST** {Host}/api/employees/addEmployee
-    - Description: Add a new employee to the system.
-    - Request Body: 
+1. **Create Employee**
+    - **Endpoint:** POST {Host}/api/employees/addEmployee
+    - **Description:** Add a new employee to the system.
+    - **Request Body:**
         ```json
         {
-            "firstName": "Shalinitest",
-            "lastName": "Mishratest",
-            "email": "mishra.k.123456@gmail.com",
-            "departmentId": 1
+            "firstName": "string",
+            "lastName": "string",
+            "email": "string",
+            "departmentId": 0,
+            "skills": [
+                "string"
+            ],
+            "dateOfJoining": "2024-01-23T08:45:59.492Z"
+        }
+        ```
+    - **Response Body:**
+        ```json
+        {
+            "id": 0,
+            "firstName": "string",
+            "lastName": "string",
+            "email": "string",
+            "departmentId": 0,
+            "skills": [
+                "string"
+            ],
+            "dateOfJoining": "2024-01-23T08:45:59.492Z"
         }
         ```
 
 2. **Get Employee by ID**
-    - Endpoint: **GET** {Host}/api/employees/{id}
-    - Description: Retrieve detailed information about a specific employee based on their ID.
+    - **Endpoint:** GET {Host}/api/employees/{id}
+    - **Description:** Retrieve detailed information about a specific employee based on their ID.
+    - **Response Body:** Detailed employee information.
 
 3. **Get All Employees**
-    - Endpoint: **GET** {Host}/api/employees
-    - Description: Retrieve a list of all employees in the system.
+    - **Endpoint:** GET {Host}/api/employees
+    - **Description:** Retrieve a list of all employees in the system.
+    - **Response Body:** List of employee details.
 
 4. **Update Employee**
-    - Endpoint: **PUT** {Host}/api/employees/{id}
-    - Description: Update the details of a specific employee based on their ID.
-    - Request Body: JSON representation of the updated employee details.
+    - **Endpoint:** PUT {Host}/api/employees/{id}
+    - **Description:** Update the details of a specific employee based on their ID.
+    - **Request Body:** JSON representation of the updated employee details.
+    - **Response Body:** Updated employee details.
 
 5. **Delete Employee**
-    - Endpoint: **DELETE** {Host}/api/employees/{id}
-    - Description: Remove a specific employee from the system based on their ID.
+    - **Endpoint:** DELETE {Host}/api/employees/{id}
+    - **Description:** Remove a specific employee from the system based on their ID.
+
+### Integration with Employee-Analytic Service
+The Employee Tracking System integrates with the Employee-Analytic Service to fetch performance-related details. The Employee-Analytic Service exposes APIs to retrieve insights and analytics related to employee performance.
 
 ### Department Management
 1. **Add Department**
